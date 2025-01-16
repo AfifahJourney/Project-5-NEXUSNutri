@@ -10,7 +10,7 @@ from PIL import Image
 
 # %%
 # API configuration
-BASE_API_URL = "http://127.0.0.1:7860"
+BASE_API_URL = "https://6e49-2001-d08-1381-def6-79cd-80fa-893a-2541.ngrok-free.app"
 FLOW_ID = "48955cd2-1abb-4841-81f9-48fb2a1a8fbd"
 ENDPOINT = "dietry"
 
@@ -38,7 +38,7 @@ def extract_message(response: dict) -> str:
         logging.error("No valid message found in response.")
         return "No valid message found in response."
 
-model = YOLO(r'C:\Users\user\Downloads\PROJECT 5\src\pages\bestn.pt')
+model = YOLO('best_yolo11n.pt')
 
 def classify_with_yolo(image):
     """Classify the input image using the YOLO model."""
